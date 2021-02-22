@@ -40,7 +40,7 @@
                                 <Image Source="/NFCRing.UI.View;component/Assets/Plus_36.png"
                                        Height="16"
                                        Width="16"/>
-                                <TextBlock Text="Add new NFC Ring"
+                                <TextBlock Text="Hinzufügen"
                                            VerticalAlignment="Center"
                                            FontSize="{StaticResource SmallFontSize}"
                                            Margin="{StaticResource ContentMarginLightLeft}"/>
@@ -83,7 +83,7 @@
 
                     <!-- name -->
                     <TextBlock Grid.Column="2"
-                               Text="Manage NFC Rings"
+                               Text="Verwaltung der NFC Tags"
                                TextTrimming="WordEllipsis"
                                VerticalAlignment="Center"
                                FontSize="{StaticResource SmallFontSize}"/>
@@ -126,7 +126,7 @@
                      x:Name="ItemsListBox"
                      ItemsSource="{Binding Items}"
                      Margin="{StaticResource ContentMarginLeft}"
-                     BorderThickness="0">
+                     BorderThickness="0" Height="258" VerticalAlignment="Top" HorizontalAlignment="Left" Width="68">
                 <ListBox.ItemContainerStyle>
                     <Style TargetType="ListBoxItem">
                         <Style.Setters>

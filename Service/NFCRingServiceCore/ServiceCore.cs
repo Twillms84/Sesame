@@ -38,7 +38,9 @@ namespace NFCRing.Service.Core
         //public static extern int PCSC_GetID([In, Out] IntPtr id, [In, Out] IntPtr err);
 
         [ImportMany]
+#pragma warning disable CS0649 // Dem Feld "ServiceCore.plugins" wird nie etwas zugewiesen, und es hat immer seinen Standardwert von "null".
         IEnumerable<Lazy<INFCRingServicePlugin>> plugins;
+#pragma warning restore CS0649 // Dem Feld "ServiceCore.plugins" wird nie etwas zugewiesen, und es hat immer seinen Standardwert von "null".
 
         Thread readerThread = null;
 
@@ -79,7 +81,9 @@ namespace NFCRing.Service.Core
                 {
                     this.container.ComposeParts(this);
                 }
+#pragma warning disable CS0168 // Die Variable "ex" ist deklariert, wird aber nie verwendet.
                 catch (CompositionException ex)
+#pragma warning restore CS0168 // Die Variable "ex" ist deklariert, wird aber nie verwendet.
                 {
                     //LogEntry(ex, "Unable to load extensions");
                 }
@@ -91,7 +95,9 @@ namespace NFCRing.Service.Core
                         plugin.Value.PluginLoad();
                         Log("Plugin " + plugin.Value.GetPluginName() + " passed Load event");
                     }
+#pragma warning disable CS0168 // Die Variable "ex" ist deklariert, wird aber nie verwendet.
                     catch(Exception ex)
+#pragma warning restore CS0168 // Die Variable "ex" ist deklariert, wird aber nie verwendet.
                     {
                         Log("Plugin threw an excception on Load event");
                     }
@@ -399,7 +405,9 @@ namespace NFCRing.Service.Core
                         {
                             nm = JsonConvert.DeserializeObject<NetworkMessage>(message);
                         }
+#pragma warning disable CS0168 // Die Variable "ex" ist deklariert, wird aber nie verwendet.
                         catch(Exception ex)
+#pragma warning restore CS0168 // Die Variable "ex" ist deklariert, wird aber nie verwendet.
                         {
                             Log(message);
                             continue;
@@ -522,7 +530,9 @@ namespace NFCRing.Service.Core
                         }
                     }
                 }
+#pragma warning disable CS0168 // Die Variable "ex" ist deklariert, wird aber nie verwendet.
                 catch(Exception ex)
+#pragma warning restore CS0168 // Die Variable "ex" ist deklariert, wird aber nie verwendet.
                 {
                     Log("TCP Client disconnected");
                     if (client.Connected)

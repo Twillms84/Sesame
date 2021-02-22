@@ -173,7 +173,9 @@ namespace NFCRing.Service.Core
                                 }
                             }
                         }
+#pragma warning disable CS0168 // Die Variable "ex" ist deklariert, wird aber nie verwendet.
                         catch (Exception ex)
+#pragma warning restore CS0168 // Die Variable "ex" ist deklariert, wird aber nie verwendet.
                         {
                             // couldnt open the port for some reason. already open elsewhere?
                             if (InaccessiblePorts.ContainsKey(portName))

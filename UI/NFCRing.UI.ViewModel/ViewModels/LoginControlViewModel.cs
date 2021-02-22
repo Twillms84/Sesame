@@ -239,7 +239,9 @@ namespace NFCRing.UI.ViewModel.ViewModels
             {
                 DevicesList = await Task.Factory.StartNew(() => NFCWMQService.GetConnectedDevices());
             }
+#pragma warning disable CS0168 // Die Variable "ex" ist deklariert, wird aber nie verwendet.
             catch (Exception ex)
+#pragma warning restore CS0168 // Die Variable "ex" ist deklariert, wird aber nie verwendet.
             {
                 
             }

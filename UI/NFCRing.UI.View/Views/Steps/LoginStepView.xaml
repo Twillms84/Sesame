@@ -17,7 +17,7 @@
 
         <!-- step text -->
         <TextBlock Grid.Row="0"
-                   Text="Enter your Windows Login credentials"
+                   Text="Geben Sie hier Ihre Windows Zugangsdaten ein."
                    HorizontalAlignment="Center"
                    FontSize="{StaticResource MediumFontSize}"
                    Margin="{StaticResource ContentMargin}"/>
@@ -35,7 +35,7 @@
             
             <!-- user name -->
             <StackPanel Grid.Column="1">
-                <TextBlock Text="User Name"
+                <TextBlock Text="Benutzername"
                            FontSize="{StaticResource NormalFontSize}"
                            Margin="{StaticResource LabelMarginBottom}"/>
                 <TextBox Style="{StaticResource TextBoxStyle}"
@@ -46,7 +46,7 @@
             
             <!-- password -->
             <StackPanel Grid.Row="1" Grid.Column="1" Margin="{StaticResource ContentMarginTop}">
-                <TextBlock Text="Password" FontSize="{StaticResource NormalFontSize}" Margin="{StaticResource LabelMarginBottom}"/>
+                <TextBlock Text="Passwort" FontSize="{StaticResource NormalFontSize}" Margin="{StaticResource LabelMarginBottom}"/>
                 
                 <Grid>
                     <!-- password text -->

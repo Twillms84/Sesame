@@ -38,7 +38,9 @@ namespace NFCRing.UI.ViewModel.ViewModels
             UserName = _userCredentials.GetName();
         }
 
+#pragma warning disable CS1998 // In dieser Async-Methode fehlen die "await"-Operatoren, weshalb sie synchron ausgeführt wird. Sie sollten die Verwendung des "await"-Operators oder von "await Task.Run(...)" in Betracht ziehen, um auf nicht blockierende API-Aufrufe zu warten bzw. CPU-gebundene Aufgaben auf einem Hintergrundthread auszuführen.
         private async Task<bool> Save()
+#pragma warning restore CS1998 // In dieser Async-Methode fehlen die "await"-Operatoren, weshalb sie synchron ausgeführt wird. Sie sollten die Verwendung des "await"-Operators oder von "await Task.Run(...)" in Betracht ziehen, um auf nicht blockierende API-Aufrufe zu warten bzw. CPU-gebundene Aufgaben auf einem Hintergrundthread auszuführen.
         {
             var password = ConvertToUnsecureString(Password);
 

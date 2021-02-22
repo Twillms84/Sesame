@@ -98,7 +98,9 @@ namespace NFCRing.Plugin.Unlock
                 ServiceCommunication.SendNetworkMessage(ref tc, (parameters.ContainsKey("Domain") ? (string)parameters["Domain"] : ""));
                 state.CredentialData.Client = tc;
             }
+#pragma warning disable CS0168 // Die Variable "ex" ist deklariert, wird aber nie verwendet.
             catch (Exception ex)
+#pragma warning restore CS0168 // Die Variable "ex" ist deklariert, wird aber nie verwendet.
             {
                 // it blew up
                 state.CredentialData.Client.Close(); // maybe i shouldnt do this here?

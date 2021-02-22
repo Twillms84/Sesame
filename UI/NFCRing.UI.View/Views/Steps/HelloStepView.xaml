@@ -27,7 +27,7 @@
         
         <!-- text 1 -->
         <TextBlock Grid.Row="2"
-                   Text="Let's set up your ring to lock and unlock your computer with an NFC Ring. You will need a compatible NFC Reader installed and your ring."
+                   Text="Ihr NFC Tag wird nun eingerichtet, damit Sie sich künftig damit einloggen können."
                    HorizontalAlignment="Center"
                    TextAlignment="Center"
                    FontSize="{StaticResource NormalFontSize}"
@@ -35,7 +35,7 @@
         
         <!-- text 2 -->
         <TextBlock Grid.Row="3"
-                   Text="During the process you will be asked to enter your login credentials. These credentials are stored in your computer in a secure form and never transmitted over internet. To learn more about our privacy policy, please follow the link below."
+                   Text="Während der Einrichtung werden Ihre Login-Daten abgefragt. Diese werden in verschlüsselter Form mit einem Server synchronisiert."
                    HorizontalAlignment="Center"
                    TextAlignment="Center"
                    FontSize="{StaticResource NormalFontSize}"
@@ -46,7 +46,7 @@
         <TextBlock Grid.Row="4"
                    HorizontalAlignment="Center"
                    FontSize="{StaticResource NormalFontSize}">
-            <Hyperlink Command="{Binding NavigateCommand}">http://nfcring.com/privacy</Hyperlink>
+            <Hyperlink Command="{Binding NavigateCommand}">http://gs-networks.de/</Hyperlink>
         </TextBlock>
     </Grid>
 </UserControl>
